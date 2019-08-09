@@ -8,15 +8,11 @@ class Battle < Sinatra::Base
 
   post '/names' do
     p '------------'
-    p '------------'
-    p '------------'
     p params
-    p '------------'
-    p '------------'
     p '------------'
     session[:player_1_name] = params[:player_1_name]
     session[:player_2_name] = params[:player_2_name] 
-    erb :play
+    redirect '/play' 
   end
 
   get '/play' do 
